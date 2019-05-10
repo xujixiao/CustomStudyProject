@@ -9,6 +9,7 @@ import java.lang.reflect.Method;
 
 /**
  * create by xujixiao on 2019/5/10 10:27
+ * 协助hook监听事件的帮助类
  */
 public class HookHelper {
     /**
