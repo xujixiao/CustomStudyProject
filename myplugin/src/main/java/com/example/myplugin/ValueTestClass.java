@@ -2,6 +2,7 @@ package com.example.myplugin;
 
 /**
  * create by xujixiao on 2019/5/10 09:53
+ * java 当中引用的值传递测试
  */
 public class ValueTestClass {
 

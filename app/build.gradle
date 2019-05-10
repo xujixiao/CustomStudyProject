@@ -17,6 +17,7 @@ android {
         }
     }
     sourceSets{
+        /*使用比较合理的layout资源分包方案，定义对应的目录文件夹*/
         main{
             res.srcDirs=[
                     'src/main/res',
