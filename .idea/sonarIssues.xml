@@ -3,12 +3,47 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/HellobikeAndroidBusinessMopedApp/business-ebikebundle/nexus.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/HellobikeAndroidBusinessMopedApp/business-ebikebundle/src/main/java/com/hellobike/ebike/business/ridecard/EBRideCardBuyActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/HellobikeAndroidBusinessMopedApp/business-ebikebundle/src/main/java/com/hellobike/ebike/business/ridecard/monthcard/EBMonthCardFragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/HellobikeAndroidBusinessMopedApp/business-ebikebundle/src/main/java/com/hellobike/ebike/business/ridecard/ticket/presenter/EBTicketBuyPresenterImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/build.gradle">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/hook/HookHelper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/hook/ProxyClick.java">
           <value>
             <set />
           </value>

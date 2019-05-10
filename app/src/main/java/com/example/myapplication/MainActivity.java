@@ -5,18 +5,25 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.myapplication.hook.HookHelper;
+
 public class MainActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        测试使用layout的分包整理策略，涉及到build.gradle文件中sourceset节点的修改配置
         setContentView(R.layout.new_main_layout);
-        findViewById(R.id.tv_main).setOnClickListener(new View.OnClickListener() {
+
+        /*使用hook技术hook onclicklistener 方法添加一些额外的操作*/
+        View.OnClickListener testClick = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"test",Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "test", Toast.LENGTH_LONG).show();
             }
-        });
+        };
+        findViewById(R.id.tv_main).setOnClickListener(testClick);
+        HookHelper.hook(this,findViewById(R.id.tv_main));
     }
 }
