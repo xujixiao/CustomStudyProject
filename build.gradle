@@ -1,3 +1,4 @@
+
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
@@ -25,3 +26,22 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+//使用源代码直接定义gradle插件使用,虽然爆红，但是可以执行运行，执行./gradlew hello
+//build.gradle
+class GreetingPlugin implements Plugin<Project> {
+
+    @Override
+    void apply(Project project) {
+        //新建task hello
+        project.task('hello') {
+            doLast {
+                println 'Hello from the GreetingPlugin'
+            }
+        }
+
+    }
+}
+////引入插件
+apply plugin: GreetingPlugin
+
