@@ -4,7 +4,7 @@
 buildscript {
     repositories {
         maven{
-            url "$rootDir/repo"
+            url "$rootDir/repo"//设置本地的地址
         }
         google()
         jcenter()
@@ -13,8 +13,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.3.2'
-        classpath 'com.fastgo:plugin:1.0.0'
-        
+        classpath 'com.fastgo:plugin:1.0.0'//引入插件
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -47,8 +46,8 @@ class GreetingPlugin implements Plugin<Project> {
 
     }
 }
-////引入插件
+////引入插件,命令行直接执行./.gradlew hello即可看到执行结果
 apply plugin: GreetingPlugin
 
-apply plugin: 'com.fastgo.plugin'
+apply plugin: 'com.fastgo.plugin'//使用插件应用
 
