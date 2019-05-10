@@ -28,6 +28,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../AndroidStudy/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/build.gradle">
           <value>
             <set />
@@ -129,6 +134,31 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/myplugintest/src/main/groovy/com/MyPlugin.groovy">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/myplugintest/src/main/groovy/com/fastgo/plugin/MyPlugin.groovy">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/myplugintest/src/main/resources/META-INF/gradle-plugins/com.MyPlugin.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/plugin/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/plugin/plugin.iml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/plugin/src/main/groovy/com/fastgo/plugin/MyPlugin.groovy">
           <value>
             <set />
           </value>
