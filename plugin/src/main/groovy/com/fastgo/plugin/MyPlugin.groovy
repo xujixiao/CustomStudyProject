@@ -13,6 +13,10 @@ public class MyPlugin implements Plugin<Project> {
         project.task("helloxujixiao"){
             doLast{
                 println("hello first plugin")
+                println("项目的版本："+project.rootDir)
+                println("项目的子项目信息：" + project.allprojects)
+                println("项目的构建文件" + project.buildFile)
+
             }
         }
     }

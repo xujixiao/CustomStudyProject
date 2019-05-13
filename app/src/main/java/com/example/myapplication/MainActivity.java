@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.myapplication.hook.HookHelper;
+import com.example.myapplication.hook.NotificationUtils;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,5 +26,7 @@ public class MainActivity extends AppCompatActivity {
         };
         findViewById(R.id.tv_main).setOnClickListener(testClick);
         HookHelper.hook(this,findViewById(R.id.tv_main));
+
+        NotificationUtils.sendNotification(this);
     }
 }

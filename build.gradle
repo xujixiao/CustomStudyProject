@@ -41,6 +41,9 @@ class GreetingPlugin implements Plugin<Project> {
         project.task('hello') {
             doLast {
                 println 'Hello from the GreetingPlugin'
+                println("项目的目录："+project.rootDir)
+                println("项目的子项目信息：" + project.allprojects)
+                println("项目的构建文件" + project.buildFile)
             }
         }
 
