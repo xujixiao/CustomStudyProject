@@ -4,11 +4,9 @@ import android.app.Notification;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.os.Build;
-import android.service.notification.StatusBarNotification;
 import android.support.annotation.RequiresApi;
 import android.util.Log;
 import android.view.View;
-import android.widget.Filter;
 import android.widget.Toast;
 
 import java.lang.reflect.Field;
@@ -51,9 +49,9 @@ public class HookHelper {
 
     /**
      * hook系统的通知
+     *
      * @param context
      */
-    @RequiresApi(api = Build.VERSION_CODES.M)
     public static void hookNotifaction(final Context context) {
         try {
             NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
@@ -71,11 +69,11 @@ public class HookHelper {
                             Toast.makeText(context, "劫持notificationmanager", Toast.LENGTH_LONG).show();
                             if (args != null && args.length > 0) {
                                 for (Object arg : args) {
-                                    Log.d("xujixiao", arg!=null?arg.getClass().toString():"");
+                                    Log.d("xujixiao", arg != null ? arg.getClass().toString() : "");
                                     if (arg != null && arg instanceof Notification) {
                                         Notification notification = (Notification) arg;
                                         String temp = null;
-                                        if (notification.tickerText!=null) {
+                                        if (notification.tickerText != null) {
                                             temp = notification.tickerText.toString();
                                         }
                                         Log.d("xujixiao", temp);
@@ -94,7 +92,7 @@ public class HookHelper {
         } catch (Exception e) {
             e.printStackTrace();
             Toast.makeText(context, "hook失败", Toast.LENGTH_LONG).show();
-    }
+        }
 
     }
 }

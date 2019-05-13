@@ -13,7 +13,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/HellobikeAndroidBusinessMopedApp/business-ebikebundle/src/main/java/com/hellobike/ebike/business/main/EBikeMainFragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/HellobikeAndroidBusinessMopedApp/business-ebikebundle/src/main/java/com/hellobike/ebike/business/main/presenter/EBikeMainPresenterImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/AndroidStudioProjects/HellobikeAndroidBusinessMopedApp/business-ebikebundle/src/main/java/com/hellobike/ebike/business/ridecard/EBRideCardBuyActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/HellobikeAndroidBusinessMopedApp/business-ebikebundle/src/main/java/com/hellobike/ebike/business/ridecard/freecharge/presenter/EBFreeChargeCardBuyPresenter.java">
           <value>
             <set />
           </value>
@@ -24,6 +39,21 @@
           </value>
         </entry>
         <entry key="$USER_HOME$/AndroidStudioProjects/HellobikeAndroidBusinessMopedApp/business-ebikebundle/src/main/java/com/hellobike/ebike/business/ridecard/ticket/presenter/EBTicketBuyPresenterImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/HellobikeAndroidBusinessMopedApp/business-ebikebundle/src/main/java/com/hellobike/ebike/ubt/EBikeClickBtnLogEvents.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/HellobikeAndroidBusinessMopedApp/business-ebikebundle/src/main/java/com/hellobike/ebike/ubt/EBikePageViewLogEvents.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/HellobikeAndroidBusinessMopedApp/repo.xml">
           <value>
             <set />
           </value>

@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 
 import com.example.myapplication.hook.HookHelper;
+import com.mixpanel.android.mpmetrics.MixpanelAPI;
 
 /**
  * create by xujixiao on 2019/5/13 10:31
@@ -19,6 +20,11 @@ public class AppApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        //添加埋点功能的框架
+        MixpanelAPI mixpanelAPI = MixpanelAPI.getInstance(this, "");
+        mixpanelAPI.track("xujixiao");
+
 
     }
 
