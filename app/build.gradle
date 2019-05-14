@@ -39,5 +39,7 @@ dependencies {
 //    implementation project(':buildSrc')
     implementation "com.mixpanel.android:mixpanel-android:5.+"
     implementation "com.google.firebase:firebase-messaging:17.3.4"
+//微信的mmkv高性能框架
+    implementation 'com.tencent:mmkv:1.0.19'
 }
 

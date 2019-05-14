@@ -68,6 +68,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/.gitignore">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/build.gradle">
           <value>
             <set />
@@ -129,6 +134,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/buildSrc/.gitignore">
           <value>
             <set />
           </value>
@@ -199,6 +209,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/buildsrc/src/main/resources/META-INF/gradle-plugins/com.xjx.gradle.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/mylibrary/.gitignore">
           <value>
             <set />
           </value>

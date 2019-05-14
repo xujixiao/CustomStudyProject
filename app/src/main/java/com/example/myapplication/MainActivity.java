@@ -2,11 +2,13 @@ package com.example.myapplication;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import com.example.myapplication.hook.HookHelper;
 import com.example.myapplication.hook.NotificationUtils;
+import com.tencent.mmkv.MMKV;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,5 +30,12 @@ public class MainActivity extends AppCompatActivity {
         HookHelper.hook(this,findViewById(R.id.tv_main));
 
         NotificationUtils.sendNotification(this);
+
+        initMMKV();
+    }
+
+    private void initMMKV(){
+        String rootDir = MMKV.initialize(this);
+        Log.d("xujixiao", rootDir);
     }
 }
