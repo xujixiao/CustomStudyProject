@@ -40,6 +40,5 @@ public class MainActivity extends AppCompatActivity {
     private void initMMKV(){
         String rootDir = MMKV.initialize(this);
         Log.d("xujixiao", rootDir);
-        Log.d("xujixiao", rootDir);
     }
 }
