@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Toast;
 
 import com.example.myapplication.hook.HookHelper;
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         NotificationUtils.sendNotification(this);
 
         initMMKV();
+        WebView webView = new WebView(this);
+//        webView.getSettings().setAllowUniversalAccessFromFileURLs(true);
     }
 
     private void initMMKV(){
