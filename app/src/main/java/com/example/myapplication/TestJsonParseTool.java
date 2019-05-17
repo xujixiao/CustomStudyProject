@@ -1,16 +1,11 @@
 package com.example.myapplication;
 
-import com.alibaba.fastjson.JSON;
 import com.google.gson.Gson;
-
-import org.w3c.dom.ProcessingInstruction;
-
-import java.util.logging.Handler;
 
 /**
  * create by xujixiao on 2019/5/15 20:58
  */
-public class Test {
+public class TestJsonParseTool {
     public static void main(String[] args) {
         Student student = new Student();
         student.name = "xujixiao";
