@@ -14,7 +14,7 @@ public class Test {
     public static void main(String[] args) {
         Student student = new Student();
         student.name = "xujixiao";
-        student.age = null;
+        student.age = 21;
         student.man = true;
         String json = new Gson().toJson(student);
         System.out.println(json);
