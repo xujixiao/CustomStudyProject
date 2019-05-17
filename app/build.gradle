@@ -36,10 +36,12 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-//    implementation project(':buildSrc')
-    implementation "com.mixpanel.android:mixpanel-android:5.+"
-    implementation "com.google.firebase:firebase-messaging:17.3.4"
-//微信的mmkv高性能框架
-    implementation 'com.tencent:mmkv:1.0.19'
+    //    implementation project(':buildSrc')
+    implementation 'com.mixpanel.android:mixpanel-android:5.+'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    //微信的mmkv高性能框架
+    //    implementation 'com.tencent:mmkv:1.0.19'
+    compile 'com.alibaba:fastjson:1.2.57'
+    implementation 'com.google.code.gson:gson:2.8.5'
 }
 

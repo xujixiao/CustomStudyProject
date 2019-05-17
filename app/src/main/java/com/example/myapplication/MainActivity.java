@@ -1,15 +1,14 @@
 package com.example.myapplication;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
+import android.text.SpannableString;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Toast;
 
 import com.example.myapplication.hook.HookHelper;
 import com.example.myapplication.hook.NotificationUtils;
-import com.tencent.mmkv.MMKV;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,10 +34,11 @@ public class MainActivity extends AppCompatActivity {
         initMMKV();
         WebView webView = new WebView(this);
 //        webView.getSettings().setAllowUniversalAccessFromFileURLs(true);
+
     }
 
     private void initMMKV(){
-        String rootDir = MMKV.initialize(this);
-        Log.d("xujixiao", rootDir);
+//        String rootDir = MMKV.initialize(this);
+//        Log.d("xujixiao", rootDir);
     }
 }
