@@ -39,7 +39,6 @@ public class TestJsonParseTool {
         System.out.println(student2.getAge());
         System.out.println(student2.getName());
 
-
     }
 
     static class Student {
