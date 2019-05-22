@@ -39,6 +39,9 @@ public class TestJsonParseTool {
         System.out.println(student2.getAge());
         System.out.println(student2.getName());
 
+
+        TestKotlinCotent testKotlinCotent = new TestKotlinCotent();
+        testKotlinCotent.test();
     }
 
     static class Student {

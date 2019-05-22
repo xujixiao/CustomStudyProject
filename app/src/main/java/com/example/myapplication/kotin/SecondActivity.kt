@@ -14,6 +14,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 /**
  * create by xujixiao on 2019-05-22 15:45
@@ -33,11 +34,20 @@ class SecondActivity : Activity() {
         setContentView(R.layout.activity_main)
         tv_test_kotlin.text = "测试kotlin的扩展用法"
         tv_test_kotlin.setOnClickListener {
+            //            主线程使用协程实例
             Log.d("xujixiao", "开始启动协程")
-            GlobalScope.launch(Dispatchers.Main) {
-                val string = sleepTime()
-                Toast.makeText(this@SecondActivity, string, Toast.LENGTH_LONG).show()
-                tv_test_kotlin.text = string
+//            GlobalScope.launch(Dispatchers.Main) {
+//                val string = sleepTime()
+//                Toast.makeText(this@SecondActivity, string, Toast.LENGTH_LONG).show()
+//                tv_test_kotlin.text = string
+//            }
+
+            GlobalScope.launch(Dispatchers.IO) {
+                val text = sleepTime()
+//                tv_test_kotlin.text=text
+                withContext(Dispatchers.Main) {
+                    tv_test_kotlin.text = text
+                }
             }
         }
     }
