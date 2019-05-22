@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.app.Application;
 import android.content.Context;
+import android.support.multidex.MultiDex;
 
 import com.example.myapplication.hook.HookHelper;
 import com.mixpanel.android.mpmetrics.MixpanelAPI;
@@ -14,6 +15,7 @@ public class AppApplication extends Application {
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
+        MultiDex.install(this);
         HookHelper.hookNotifaction(this);
     }
 
@@ -24,8 +26,6 @@ public class AppApplication extends Application {
         //添加埋点功能的框架
         MixpanelAPI mixpanelAPI = MixpanelAPI.getInstance(this, "");
         mixpanelAPI.track("xujixiao");
-
-
     }
 
 }

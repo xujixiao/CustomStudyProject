@@ -2,13 +2,17 @@ package com.example.myapplication;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.SpannableString;
 import android.view.View;
-import android.webkit.WebView;
 import android.widget.Toast;
 
 import com.example.myapplication.hook.HookHelper;
 import com.example.myapplication.hook.NotificationUtils;
+import com.example.myapplication.kotin.TestEntity;
+import com.example.myapplication.kotin.TestStudentLombox;
+import com.example.myapplication.template.TestTemplate;
+
+import java.util.Collections;
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,20 +28,26 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "test", Toast.LENGTH_LONG).show();
+                LoginActivity.start(MainActivity.this);
             }
         };
         findViewById(R.id.tv_main).setOnClickListener(testClick);
-        HookHelper.hook(this,findViewById(R.id.tv_main));
+        HookHelper.hook(this, findViewById(R.id.tv_main));
 
         NotificationUtils.sendNotification(this);
 
-        initMMKV();
-        WebView webView = new WebView(this);
-//        webView.getSettings().setAllowUniversalAccessFromFileURLs(true);
+        TestEntity testEntity = new TestEntity();
+        testEntity.setName("xujxiiao");
+
+        TestStudentLombox studentLombox = new TestStudentLombox();
+        studentLombox.setName("xujxiiao").setAge("xujixiao");
 
     }
 
-    private void initMMKV(){
+    /**
+     * 初始化腾讯的mmkv框架的方式
+     */
+    private void initMMKV() {
 //        String rootDir = MMKV.initialize(this);
 //        Log.d("xujixiao", rootDir);
     }

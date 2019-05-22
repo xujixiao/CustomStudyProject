@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
     <!-- This permission is required to allow the application to send events and properties to Mixpanel -->
-    <uses-permission android:name="android.permission.INTERNET" />
-
-    <!-- This permission is optional but recommended so we can be smart about when to send data  -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-    <!-- This permission is optional but recommended so events will contain information about bluetooth state -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- This permission is optional but recommended so we can be smart about when to send data -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- This permission is optional but recommended so events will contain information about bluetooth state -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
 
     <application
@@ -18,6 +19,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

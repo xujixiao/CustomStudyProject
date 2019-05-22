@@ -72,11 +72,6 @@ public class HookHelper {
                                     Log.d("xujixiao", arg != null ? arg.getClass().toString() : "");
                                     if (arg != null && arg instanceof Notification) {
                                         Notification notification = (Notification) arg;
-                                        String temp = null;
-                                        if (notification.tickerText != null) {
-                                            temp = notification.tickerText.toString();
-                                        }
-                                        Log.d("xujixiao", temp);
                                     }
                                 }
                             }
