@@ -1,5 +1,7 @@
 package com.example.myapplication.kotin;
 
+import javax.xml.transform.Source;
+
 import lombok.Data;
 import lombok.experimental.Accessors;
 
@@ -12,4 +14,10 @@ public class TestStudentLombox {
     private String name;
     private String subName;
     private String age;
+
+    public void testJVMName(){
+        TestImp testImp = new TestImp();
+        System.out.println(TestImp.showJvmName());
+
+    }
 }
