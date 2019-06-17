@@ -9,7 +9,13 @@ import java.util.Set;
 /**
  * create by xujixiao on 2019/5/15 20:58
  */
-public class TestJsonParseTool {
+public final class TestJsonParseTool {
+    private TestJsonParseTool() {
+    }
+
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
         Student student = new Student();
         student.name = "xujixiao";
@@ -19,21 +25,13 @@ public class TestJsonParseTool {
         System.out.println(json);
         json = json.replace("90", "null");
         System.out.println(json);
-//        Student2 newstudent = JSON.parseObject(json, Student2.class);
-//        System.out.println(newstudent.age);
-
-
-//        Child child = new Child();
-//        child.newname = "xujixiao";
-//        handle(child);
-//        System.out.println(child.newname);
 
         HashMap<String, Object> hashMap = new HashMap<>();
         hashMap.put("name", "xujixiao");
         hashMap.put("age", "0");
         hashMap.put("man", true);
         json = new Gson().toJson(hashMap);
-        System.out.println("hashmap解析的字符串是："+json);
+        System.out.println("hashmap解析的字符串是：" + json);
         Gson gson = new Gson();
         StudentKotlin student2 = gson.fromJson(json, StudentKotlin.class);
         System.out.println(student2.getAge());
@@ -62,6 +60,9 @@ public class TestJsonParseTool {
     }
 
 
+    /**
+     * @param student
+     */
     public static void handle(Student student) {
         if (student instanceof Child) {
             Child child = (Child) student;

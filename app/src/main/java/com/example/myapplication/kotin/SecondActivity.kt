@@ -1,16 +1,13 @@
 package com.example.myapplication.kotin
 
 import android.app.Activity
-import android.app.LauncherActivity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.provider.Settings
 import android.util.Log
-import android.view.View
-import android.widget.Toast
 import com.example.myapplication.R
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.include_test_layout.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -33,6 +30,8 @@ class SecondActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         tv_test_kotlin.text = "测试kotlin的扩展用法"
+//        myName.text="我的名字"
+        myName.text="我的名字"
         tv_test_kotlin.setOnClickListener {
             //            主线程使用协程实例
             Log.d("xujixiao", "开始启动协程")

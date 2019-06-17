@@ -5,7 +5,6 @@ import android.content.Context;
 import android.support.multidex.MultiDex;
 
 import com.example.myapplication.hook.HookHelper;
-import com.mixpanel.android.mpmetrics.MixpanelAPI;
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.Logger;
 
@@ -26,8 +25,8 @@ public class AppApplication extends Application {
         super.onCreate();
 
         //添加埋点功能的框架
-        MixpanelAPI mixpanelAPI = MixpanelAPI.getInstance(this, "");
-        mixpanelAPI.track("xujixiao");
+//        MixpanelAPI mixpanelAPI = MixpanelAPI.getInstance(this, "");
+//        mixpanelAPI.track("xujixiao");
 
         Logger.addLogAdapter(new AndroidLogAdapter());
     }

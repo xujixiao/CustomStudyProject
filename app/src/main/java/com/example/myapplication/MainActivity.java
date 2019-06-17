@@ -4,17 +4,20 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import com.example.myapplication.databinding.NewMainLayoutBinding;
 import com.example.myapplication.hook.HookHelper;
 import com.example.myapplication.hook.NotificationUtils;
 import com.example.myapplication.kotin.SecondActivity;
 import com.example.myapplication.kotin.StudentKotlin;
+import com.example.myapplication.kotin.Teacher2;
 import com.example.myapplication.kotin.TestEntity;
 import com.example.myapplication.kotin.TestStudentLombox;
 import com.orhanobut.logger.Logger;
 
-import java.util.PriorityQueue;
+import io.flutter.embedding.android.FlutterFragment;
+import io.flutter.facade.Flutter;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -54,14 +57,22 @@ public class MainActivity extends AppCompatActivity {
 
         TestStudentLombox studentLombox = new TestStudentLombox();
         studentLombox.setName("xujxiiao").setAge("xujixiao");
-        studentLombox.setName("xujxiiao").setAge("xujixiao");
 
 
         StudentKotlin studentKotlin = new StudentKotlin("xujixiao", 0);
 //        studentKotlin.setAge2();
         showName(studentKotlin);
 
+        Teacher2 teacher2 = new Teacher2();
+//        teacher2.showName(null);
 
+        addFlutterFragment();
+
+    }
+
+    private void addFlutterFragment() {
+        LinearLayout linearLayout = findViewById(R.id.ll_flutter_fragment);
+        getSupportFragmentManager().beginTransaction().add(R.id.ll_flutter_fragment, Flutter.createFragment("这个是flutter的fragment的页面")).commit();
     }
 
     /**
@@ -73,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     *
+     * 测试对于泛型对象的输出
      */
     private static <T> void showName(T t) {
         Logger.d(t);

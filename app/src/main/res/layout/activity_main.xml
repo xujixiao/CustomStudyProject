@@ -17,4 +17,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <include layout="@layout/include_test_layout"
+        android:id="@+id/in_my_name"/>
+
 </LinearLayout>

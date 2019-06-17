@@ -1,1 +1,7 @@
-include ':app', ':plugin', ':buildSrc','mylibrary'
+include ':app', ':plugin', ':buildSrc', 'mylibrary'
+
+setBinding(new Binding([gradle:this]))
+evaluate(new File(
+        settingsDir.parentFile,'flutter_module/.android/include_flutter.groovy'
+))
+

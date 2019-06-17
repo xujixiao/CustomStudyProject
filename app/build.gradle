@@ -14,7 +14,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.example.myapplication"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -41,6 +41,11 @@ android {
             ]
         }
     }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
 }
 
 
@@ -54,8 +59,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     //    implementation project(':buildSrc')
 //    可视化埋点sdk依赖
-    implementation 'com.mixpanel.android:mixpanel-android:5.+'
-    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+//    implementation 'com.mixpanel.android:mixpanel-android:5.+'
+//    implementation 'com.google.firebase:firebase-messaging:17.3.4'
     //微信的mmkv高性能框架
     //    implementation 'com.tencent:mmkv:1.0.19'
 //    阿里巴巴的fastjson的
@@ -75,6 +80,7 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-reflect:1.3.31"
 
     implementation 'com.orhanobut:logger:2.2.0'
+    implementation project(':flutter')
 
 
 }

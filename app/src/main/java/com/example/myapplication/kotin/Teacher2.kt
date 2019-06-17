@@ -9,7 +9,7 @@ class Teacher2 {
         val name = "name"
     }
 
-    fun showName() {
-        print(name)
+    fun showName(testName:String) {
+        print(testName)
     }
 }
