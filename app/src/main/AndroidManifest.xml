@@ -30,6 +30,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".kotin.SecondActivity" />
+        <activity android:name=".testdata.FirstActivity" />
+        <activity android:name=".testdata.SecondActivity" />
+        <activity android:name=".testdata.ThirdActivity" />
+        <activity android:name=".activityfragemnttest.TestDataActivity" />
     </application>
 
 </manifest>

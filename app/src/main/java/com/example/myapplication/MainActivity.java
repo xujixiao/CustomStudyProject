@@ -1,11 +1,16 @@
 package com.example.myapplication;
 
 import android.databinding.DataBindingUtil;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.example.myapplication.activityfragemnttest.TestDataActivity;
 import com.example.myapplication.databinding.NewMainLayoutBinding;
 import com.example.myapplication.hook.HookHelper;
 import com.example.myapplication.hook.NotificationUtils;
@@ -14,16 +19,19 @@ import com.example.myapplication.kotin.StudentKotlin;
 import com.example.myapplication.kotin.Teacher2;
 import com.example.myapplication.kotin.TestEntity;
 import com.example.myapplication.kotin.TestStudentLombox;
+import com.example.myapplication.template.IntentDataIml;
+import com.example.myapplication.testdata.FirstActivity;
 import com.orhanobut.logger.Logger;
 
-import io.flutter.embedding.android.FlutterFragment;
 import io.flutter.facade.Flutter;
+import lombok.val;
 
 public class MainActivity extends AppCompatActivity {
 
 
     private String name;
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +50,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 //                LoginActivity.start(MainActivity.this);
-                SecondActivity.Companion.start(MainActivity.this);
+//                val intentData = new IntentDataIml();
+//                SecondActivity.Companion.start(MainActivity.this, intentData);
+//                FirstActivity.start(MainActivity.this);
+
+                TestDataActivity.start(MainActivity.this);
             }
         };
         findViewById(R.id.tv_main).setOnClickListener(testClick);
@@ -67,6 +79,16 @@ public class MainActivity extends AppCompatActivity {
 //        teacher2.showName(null);
 
         addFlutterFragment();
+
+        FrameLayout frameLayout = findViewById(R.id.fl_contain);
+        for (int i = 0; i < 3; i++) {
+            ImageView imageView = new ImageView(this);
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(50, 50);
+            layoutParams.setMargins(50 * i, 0, 0, 0);
+            imageView.setLayoutParams(layoutParams);
+            imageView.setImageResource(R.mipmap.ic_launcher);
+            frameLayout.addView(imageView);
+        }
 
     }
 

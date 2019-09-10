@@ -5,7 +5,9 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import com.example.myapplication.R
+import com.example.myapplication.template.IntentData
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.include_test_layout.*
 import kotlinx.coroutines.Dispatchers
@@ -19,19 +21,24 @@ import kotlinx.coroutines.withContext
 class SecondActivity : Activity() {
 
     companion object {
-        fun start(context: Context) {
+        fun start(context: Context, intentData: IntentData) {
             val starter = Intent(context, SecondActivity::class.java)
-//            starter.putExtra();
+            starter.putExtra("data", intentData);
             context.startActivity(starter)
         }
     }
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val intentData = intent?.getSerializableExtra("data")
+        if (intentData is IntentData) {
+            Toast.makeText(this, intentData.gainName(), Toast.LENGTH_LONG).show()
+        }
         tv_test_kotlin.text = "测试kotlin的扩展用法"
 //        myName.text="我的名字"
-        myName.text="我的名字"
+        myName.text = "我的名字"
         tv_test_kotlin.setOnClickListener {
             //            主线程使用协程实例
             Log.d("xujixiao", "开始启动协程")
