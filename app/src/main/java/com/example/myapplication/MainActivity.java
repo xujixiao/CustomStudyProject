@@ -5,6 +5,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -45,6 +46,10 @@ public class MainActivity extends AppCompatActivity {
             newMainLayoutBinding.tvMain.setText("databinding测试");
         }
 
+        int a = 1;
+        int b = 2;
+        int c = 1 / 2;
+        Log.d("xujixiao", c + "-----java的值");
         /*使用hook技术hook onclicklistener 方法添加一些额外的操作*/
         View.OnClickListener testClick = new View.OnClickListener() {
             @Override
@@ -54,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 //                SecondActivity.Companion.start(MainActivity.this, intentData);
 //                FirstActivity.start(MainActivity.this);
 
-                TestDataActivity.start(MainActivity.this);
+                TestDataActivity.Companion.start(MainActivity.this);
             }
         };
         findViewById(R.id.tv_main).setOnClickListener(testClick);
